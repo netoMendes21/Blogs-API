@@ -1,10 +1,10 @@
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('posts_categories', {
+  up: async (queryInteface, Sequelize) => {
+    await queryInteface.createTable('posts_categories', {
       post_id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
-        refereces: {
+        references: {
           model: 'blog_posts',
           key: 'id',
         },

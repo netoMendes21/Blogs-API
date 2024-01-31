@@ -1,14 +1,13 @@
-const { query } = require("express");
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('categories', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         type: Sequelize.INTEGER,
-        primaryKey: true
+        primaryKey: true,
+        autoIncrement: true
       },
+
       name: {
         allowNull: false,
         type: Sequelize.STRING
