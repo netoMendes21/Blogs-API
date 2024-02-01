@@ -28,5 +28,4 @@ const servicesGetAllPosts = async (userId) => {
   const searchPost = await BlogPost.findAll({ where: { userId }, include: data });
   return searchPost;
 };
-
 module.exports = { servicesCreateNewPost, servicesGetAllPosts };
