@@ -2,7 +2,7 @@ module.exports = (sequelize, DataTypes) => {
   const modelCategory = sequelize.define('Category', {
     id: {
       type: DataTypes.INTEGER,
-      autoincrement: true,
+      autoIncrement: true,
       allowNull: false,
       primaryKey: true
     },
@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   },
     {
       tableName: 'categories',
-      timesTamps: false
+      timestamps: false
     });
   return modelCategory;
 };
